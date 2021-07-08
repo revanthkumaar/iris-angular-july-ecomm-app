@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { DataService } from './data.service';
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent],
   imports: [
@@ -21,10 +22,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatButtonModule
-    
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
