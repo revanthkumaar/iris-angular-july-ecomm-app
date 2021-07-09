@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {environment} from './../environments/environment'
 import { BrowserModule } from '@angular/platform-browser';
 //import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { LoginComponent } from './login/login.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { BsDropdownComponent } from './bs-dropdown/bs-dropdown.component'; 
+import {AngularFireModule} from '@angular/fire';
 @NgModule({
   declarations: [AppComponent, HomeComponent, AboutComponent, ProductsComponent, ShoppingCartComponent, CheckOutComponent, OrderSuccessComponent, MyOrdersComponent, AdminProductsComponent, AdminOrdersComponent, LoginComponent, BsNavbarComponent, BsDropdownComponent],
   imports: [
@@ -35,6 +37,7 @@ import { BsDropdownComponent } from './bs-dropdown/bs-dropdown.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebase),
     //NgbModule.forRoot(),
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
