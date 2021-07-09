@@ -21,9 +21,10 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component'
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BsNavbarComponent } from './bs-navbar/bs-navbar.component'; 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ProductsComponent, ShoppingCartComponent, CheckOutComponent, OrderSuccessComponent, MyOrdersComponent, AdminProductsComponent, AdminOrdersComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, ProductsComponent, ShoppingCartComponent, CheckOutComponent, OrderSuccessComponent, MyOrdersComponent, AdminProductsComponent, AdminOrdersComponent, LoginComponent, BsNavbarComponent],
   imports: [
     BrowserModule,
    // AppRoutingModule,
