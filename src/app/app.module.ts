@@ -33,7 +33,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    NgbModule.forRoot(),
+    //NgbModule.forRoot(),
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
       { path: 'products', component: ProductsComponent },
