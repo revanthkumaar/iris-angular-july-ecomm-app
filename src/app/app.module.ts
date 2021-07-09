@@ -26,11 +26,28 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { BsDropdownComponent } from './bs-dropdown/bs-dropdown.component'; 
 import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth'
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, ProductsComponent, ShoppingCartComponent, CheckOutComponent, OrderSuccessComponent, MyOrdersComponent, AdminProductsComponent, AdminOrdersComponent, LoginComponent, BsNavbarComponent, BsDropdownComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ProductsComponent,
+    ShoppingCartComponent,
+    CheckOutComponent,
+    OrderSuccessComponent,
+    MyOrdersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
+    LoginComponent,
+    BsNavbarComponent,
+    BsDropdownComponent,
+  ],
   imports: [
     BrowserModule,
-   // AppRoutingModule,
+    // AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule, //hhtp client service can be used across the app
     MatToolbarModule,
@@ -38,9 +55,11 @@ import {AngularFireModule} from '@angular/fire';
     MatCardModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     //NgbModule.forRoot(),
     RouterModule.forRoot([
-      {path:'', component: HomeComponent},
+      { path: '', component: HomeComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'check-out', component: CheckOutComponent },
@@ -48,9 +67,8 @@ import {AngularFireModule} from '@angular/fire';
       { path: 'my/orders', component: MyOrdersComponent },
       { path: 'login', component: LoginComponent },
       { path: 'admin/products', component: AdminProductsComponent },
-      { path: 'admin/orders', component: AdminOrdersComponent }
-    ])
-
+      { path: 'admin/orders', component: AdminOrdersComponent },
+    ]),
   ],
   providers: [DataService],
   bootstrap: [AppComponent],
