@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:  {apiKey: "AIzaSyB-1Ya5esMT_xxGg3sfGdj8uiJpTOERwvo",
+    authDomain: "ecomm-iris-angular.firebaseapp.com",
+    projectId: "ecomm-iris-angular",
+    storageBucket: "ecomm-iris-angular.appspot.com",
+    messagingSenderId: "216869102520",
+    appId: "1:216869102520:web:f9487a7fd94a20b845654d",
+    measurementId: "G-BZ4VH2D167"
+  }
 };
 
 /*

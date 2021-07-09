@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ecomm-iris-angular": {
+      "hosting": {
+        "ecomm-app": [
+          "ecomm-iris-angular"
+        ]
+      }
+    }
+  }
+}
