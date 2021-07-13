@@ -46,7 +46,7 @@ import { SignoutComponent } from './signout/signout.component';
     BsDropdownComponent,
     SignupComponent,
     SigninComponent,
-    SignoutComponent
+    SignoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +70,7 @@ import { SignoutComponent } from './signout/signout.component';
       { path: 'my/orders', component: MyOrdersComponent },
       { path: 'admin/products', component: AdminProductsComponent },
       { path: 'admin/orders', component: AdminOrdersComponent },
+      { path: 'sign-in', component: SigninComponent },
     ]),
   ],
   providers: [DataService],
