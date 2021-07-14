@@ -22,14 +22,16 @@ import { AdminProductsComponent } from './components/admin/admin-products/admin-
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import {RouterModule} from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
-import { BsDropdownComponent } from './bs-dropdown/bs-dropdown.component'; 
+
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth'
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignoutComponent } from './signout/signout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {AdminTasksModule} from './admin-tasks/admin-tasks.module'
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { SignoutComponent } from './signout/signout.component';
     SignupComponent,
     SigninComponent,
     SignoutComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ import { SignoutComponent } from './signout/signout.component';
     BrowserAnimationsModule, //hhtp client service can be used across the app
     MatToolbarModule,
     MatIconModule,
+    AdminTasksModule,
     MatCardModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),

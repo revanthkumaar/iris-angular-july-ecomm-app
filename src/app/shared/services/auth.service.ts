@@ -25,7 +25,7 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
+        sessionStorage.setItem('user', JSON.stringify(this.userData));
         
       } else {
         localStorage.setItem('user', null);
@@ -101,6 +101,7 @@ export class AuthService {
       .then((result) => {
         this.ngZone.run(() => {
           this.router.navigate(['dashboard']);
+          console.log(result)
         });
         this.SetUserData(result.user);
       })
