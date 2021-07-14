@@ -20,7 +20,11 @@ export class AdminTasksComponent implements OnInit {
 
       this.store.dispatch(new taskListActions.GetTasks);
 
-      
+      this.store.select('tasksList').subscribe(response => {
+            this.tasksList = response.tasksList;
+            this.loading = response.loading;
+      });
+
   }
 
 }
