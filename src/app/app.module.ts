@@ -30,7 +30,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignoutComponent } from './signout/signout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {AdminTasksModule} from './admin-tasks/admin-tasks.module'
+import {AdminTasksModule} from './admin-tasks/admin-tasks.module';
+import { EffectsModule } from '@ngrx/effects'
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import {AdminTasksModule} from './admin-tasks/admin-tasks.module'
       { path: 'admin/orders', component: AdminOrdersComponent },
       { path: 'sign-in', component: SigninComponent },
     ]),
+    EffectsModule.forRoot([]),
   ],
   providers: [DataService],
   bootstrap: [AppComponent],

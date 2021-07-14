@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
+import { AdminTasksComponent } from './admin-tasks.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AdminTasksComponent
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
